@@ -44,7 +44,7 @@ for (let i = 0; i< numCandidates; i++){
     })
 }
 
-const numVoters = parseInt(prompt("Write how many voters"));
+const numVoters = parseInt(prompt("Choose how many voters"));
 
 for(let i=0; i<numVoters; i++){
     const vote = prompt(`Voter ${i+1}, who do you vote for?`)
