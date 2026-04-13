@@ -92,20 +92,23 @@ const picArray = [
   },
 ];
 
-// add your code here
+// Continue task 5. Folder t11 already exists. Follow the instructions in t11.txt. Modify the program to open large image in a modal when <article> is clicked. (6p)
+// kick yourself at this point if you used innerHTML to create the <article> and its content.
+// add the following html code between </div> and </body> manually to the HTML-document (no JS)
+// <dialog>
+//    <span>&#x2715;</span>
+//    <img>
+// </dialog>
+// picArray has two images for each item: medium and large. Medium is used in the <img> inside the <article> and large is used in the <img> inside the <dialog>.
+// use showModal() and close() functions to show and hide <dialog>
+// the same time you are opening the modal, you should put the large image to the <img> in the modal.
+// Don't forget to add alt attribute.
+// use <span> inside <dialog> to close the modal.
 
-// Open t5 folder in your IDE/editor. Create multiple <article> elements that contain heading, image, image caption and text and populate them with the data from picArray. Add the articles to the <section> element. (5p)
-// The structure of the articles should be this:
-// <article class="card">
-//    <h2>title_from_picArray</h2>
-//    <figure>
-//       <img src="medium_image_from_picArray" alt="title_from_picArray">
-//       <figcaption>caption_from_picArray</figcaption>
-//    </figure>
-//    <p>description_from_picArray</p>
-// </article>
-
-const target = document.querySelector("#pictures");
+const target = document.querySelector('#pictures');
+const modal = document.querySelector('dialog');
+const modalImg = modal.querySelector('img');
+const closeSpan = modal.querySelector('span');
 
 for (let i=0; i<picArray.length; i++){
     const article = document.createElement("article");
